@@ -11,6 +11,7 @@ router.get('/',async (req,res)=>{
       await client.connect();
       const db = client.db('MiniProjectDBMS');
       const collectionArray = await db.collection('CriminalDatabase').aggregate().toArray();
+      res.send(collectionArray);
    } catch (err) {
       console.log(err)
    }
