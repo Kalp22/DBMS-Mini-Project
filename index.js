@@ -10,7 +10,7 @@ app.use(express.json());
 // login route
 const login = require('./api/login.js')
 // Display top 10 Criminals route
-// const topCriminals = require('./api/topCriminals.js')
+const topCriminals = require('./api/topCriminals.js')
 // Display all Criminals route
 const criminals = require('./api/Criminals.js');
 // Add more Criminals route
@@ -18,7 +18,7 @@ const criminals = require('./api/Criminals.js');
 
 // using the routes
 app.use('/login',login)
-// app.use('/topCriminals',topCriminals);
+app.use('/topCriminals',topCriminals);
 app.use('/criminals',criminals);
 // app.use('/addCriminal',addCriminal);
 
